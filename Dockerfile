@@ -6,8 +6,8 @@ unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page280/medi.zip /var/www/html/
 WORKDIR /var/www/html
 RUN unzip medi.zip
-cd medi-html/
-mv about.html client.html contact.html css/ fonts/ images/ index.html js/ product.html /var/www/html/
+#cd medi-html/
+#mv about.html client.html contact.html css/ fonts/ images/ index.html js/ product.html /var/www/html/
 #RUN cp -rvf heustonn-html/* .
 #RUN rm -rf _heustonn.zip heustonn-html
 CMD ["/usr/bin/sbin/httpd", "-D" "FOREGROUND"]
