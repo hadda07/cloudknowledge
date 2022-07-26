@@ -7,6 +7,6 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page280/he
 WORKDIR /var/www/html
 RUN unzip heustonn.zip
 RUN cp -rvf heustonn-html/* .
-RUN rm -rf _heustonn.zip heustonn-html
+#RUN rm -rf _heustonn.zip heustonn-html
 CMD ["/usr/bin/sbin/httpd", "-D" "FOREGROUND"]
 EXPOSE 80
