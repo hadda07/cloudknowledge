@@ -10,4 +10,9 @@ RUN cp -rvf heustonn-html/* .
 RUN rm -rf _heustonn.zip heustonn-html
 CMD ["/usr/bin/sbin/httpd", "-D" "FOREGROUND"]
 ENTRYPOINT ["/usr/sbin/httpd","-D","FOREGROUND"]
+CMD /etc/init.d/httpd start
+CMD ["service" "httpd" "start"]
+CMD ["/bin/bash", "/etc/init.d/httpd start"]
+ENTRYPOINT /etc/init.d/httpd CMD start
+CMD ./start.sh
 EXPOSE 80
