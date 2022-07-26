@@ -8,6 +8,6 @@ WORKDIR /var/www/html
 RUN unzip heustonn.zip
 RUN cp -rvf heustonn-html/* .
 RUN rm -rf _heustonn.zip heustonn-html
-CMD ["/usr/bin/sbin/httpd","FOREGROUND"]
+CMD ["/usr/bin/sbin/httpd", "-D" "FOREGROUND"]
 ENTRYPOINT ["/usr/sbin/httpd","-D","FOREGROUND"]
 EXPOSE 80
