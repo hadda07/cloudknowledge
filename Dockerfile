@@ -9,4 +9,5 @@ RUN unzip heustonn.zip
 RUN cp -rvf heustonn-html/* .
 RUN rm -rf _heustonn.zip heustonn-html
 CMD ["/usr/bin/sbin/httpd","FOREGROUND"]
+ENTRYPOINT ["/usr/sbin/httpd","-D","FOREGROUND"]
 EXPOSE 80
